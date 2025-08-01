@@ -42,7 +42,7 @@ jobs:
           pkill -f 'java -jar' || true
 
           echo "🧹 Cleaning previous WAR files..."
-          rm -f /home/ec2-user/app/*.log
+          rm -f /home/ubuntu/app/*.log
 
           echo "🚀 Starting new WAR app in background..."
-          nohup java -jar /home/ec2-user/app/*.war --server.port=8888 > /home/ec2-user/app/log.txt 2>&1 &
+          nohup java -jar /home/ubuntu/app/*.war --server.port=8888 > /home/ubuntu/app/log.txt 2>&1 &
