@@ -38,6 +38,12 @@ jobs:
         username: ${{ secrets.AWS_USER }}
         key: ${{ secrets.AWS_KEY }}
         script: |
+          echo "🟢 Java 설치 확인/진행..."
+          if ! type java >/dev/null 2>&1; then
+            sudo apt-get update -y
+            sudo apt-get install -y openjdk-17-jdk
+          fi
+
           echo "🛑 Killing old java process (if any)..."
           pkill -f 'java -jar' || true
 
