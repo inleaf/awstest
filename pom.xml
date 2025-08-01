@@ -52,7 +52,6 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-
     <build>
         <plugins>
             <!-- Spring Boot WAR 빌드를 위한 plugin -->
