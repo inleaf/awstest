@@ -29,7 +29,7 @@ jobs:
         username: ${{ secrets.AWS_USER }}
         key: ${{ secrets.AWS_KEY }}
         source: target/*.war
-        target: /home/ec2-user/app/
+        target: /home/ubuntu/app/
 
     - name: 🚀 Start Spring Boot WAR on EC2
       uses: appleboy/ssh-action@v0.1.10
